@@ -16,7 +16,9 @@ then
     exit 1
 fi    
 
+search_result=${search_result//\*/""}
+search_result=$(echo "$search_result" | sed 's/^[ \t]*//;s/[ \t]*$//')
 echo "result: '$search_result'"
 
 # jump to the selected branch
-git checkout $search_result    
+# git checkout "$search_result"    
