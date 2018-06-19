@@ -5,7 +5,7 @@ target_pattern=$1
 
 echo "looking for branch name containing '$target_pattern' ..."
 
-search_result=$(git branch --list | grep "$target_pattern")
+search_result=$(git branch -a | grep "$target_pattern")
 result_amount=$(echo "$search_result" | wc -l)
 
 # check if multiple results has been found
