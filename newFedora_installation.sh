@@ -8,7 +8,7 @@ echo -e "Welcome to your new Fedora environment!\\n"
 
 # Upgrading system
 echo -e "Upgrading the system\\t\\t"
-# echo -e "$0" | sudo -S dnf -y update | cat > dnf_update_log
+
 if [[ $("echo -e $0 | sudo -S dnf -y update | cat > dnf_update_log") ]]; then
     echo -e "[  OK  ]\\n"
 else
@@ -18,7 +18,7 @@ fi
 
 # Installing basic tools
 echo -e "Installing git\\t\\t"
-# echo "$0" | sudo -S dnf install git nano | cat >> dnf_install_basic_log
+
 if [[ $("echo $0 | sudo -S dnf install git nano | cat >> dnf_install_basic_log") ]]; then
     echo -e "[  OK  ]\\n"
 else
@@ -39,3 +39,8 @@ else
     fi
     echo -e "[ DONE ]\\n"
 fi
+
+mkdir ~/installation_tmp
+cd ~/installation_tmp || exit
+git clone https://github.com/nikotrone/Linux-Scripts.git
+cd Linux-Scripts || exit
