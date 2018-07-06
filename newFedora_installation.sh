@@ -4,16 +4,16 @@
 # TODO: check that the password is provided
 #if[ $0 ]
 
-echo "Welcome to your new Fedora environment!"
+echo -e "Welcome to your new Fedora environment!\n"
 
 # Installing basic tools
-echo "Upgrading the system\t\t"
+echo -e "Upgrading the system\t\t"
 echo "$0" | sudo -S dnf -y update
 
 # TODO: check if last command returned a good exit value then echo OK, otherwise fail
-echo "[  OK  ]\n"
+echo -e "[  OK  ]\n"
 
 
-echo "Installing git\t\t"
+echo -e "Installing git\t\t"
 echo "$0" | sudo -S dnf install git
-echo [  OK  ]
+echo -e "[  OK  ]\n"
