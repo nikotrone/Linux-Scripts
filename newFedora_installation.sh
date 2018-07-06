@@ -8,7 +8,7 @@ echo -e "Welcome to your new Fedora environment!\\n"
 
 # Installing basic tools
 echo -e "Upgrading the system\\t\\t"
-echo "$0" | sudo -S dnf -y update
+echo -e "$0" | sudo -S dnf -y update
 
 # TODO: check if last command returned a good exit value then echo OK, otherwise fail
 echo -e "[  OK  ]\\n"
