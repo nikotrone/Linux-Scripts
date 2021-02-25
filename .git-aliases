@@ -1,0 +1,41 @@
+alias gb='git branch'
+alias gba='git branch -a'
+alias gc='git commit -v'
+alias gci='git commit'
+alias gcia='git commit --amend -c HEAD'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
+alias gd='git diff'
+alias gdc='git diff --cached --word-diff'
+alias gdf='git diff --word-diff'
+alias gg='git grep'
+alias glb='git log --decorate --oneline'
+# alias glg='git log --pretty=oneline --abbrev-commit --graph --decorate'
+alias glg='git log --decorate --graph --oneline'
+alias gld='git log -p --'
+alias gls='git log --stat'
+alias gll='git log --pretty=format:"%x1b[33m%h %Cgreen%m%Creset %s %Cgreen(%an)%Creset" -n 10'
+alias gllr='gll refs/remotes/origin/HEAD...HEAD;echo " ^ not yet pushed";gll refs/remotes/origin/HEAD'
+alias gllt='git log --pretty=format:"%x1b[33m%h %Cgreen%m %x1b[33m%ai %Creset %s %Cgreen(%an)%Creset" -n 10'
+alias gpl='git pull'
+alias gm='git merge'
+alias gps='git push'
+alias grom='git rebase origin/master'
+alias gsh='git stash'
+alias gst='git status'
+if [[ $system_label == 'macpro' ]]
+then
+  gitsvn='git svn'
+else
+  gitsvn='git-svn'
+fi
+alias gsvn="$gitsvn"
+alias gsdc="$gitsvn dcommit"
+alias gsrb="$gitsvn rebase"
+alias gf='git fetch'
+alias grb='git rebase'
+alias gri='git rebase --interactive'
+alias giturl='git config --get remote.`git config --get branch.master.remote`.url'
+
+alias gff='git flow feature'
+
