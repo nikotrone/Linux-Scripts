@@ -1,0 +1,21 @@
+Host simple
+    HostName <ipAddressHere>
+    User nikotrone
+    IdentityFile /Users/Marco/.ssh/id_dsa
+
+Host stepstone
+  HostName <ipAddressHere>
+  User bronroot
+  IdentityFile ~/.ssh/my_rsa
+  AddKeysToAgent yes
+  UseKeychain yes
+  LocalForward  13390 172.16.1.244:3389
+
+Host no_key_request
+  Hostname <ipAddressHere>
+  ForwardAgent yes
+  User centos
+  IdentityFile ~/.ssh/id_rsa
+  AddKeysToAgent yes
+  UseKeychain yes
+  ServerAliveInterval 50
