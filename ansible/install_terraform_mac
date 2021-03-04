@@ -1,0 +1,8 @@
+# install repo
+brew tap hashicorp/tap
+
+# install terraform
+brew install hashicorp/tap/terraform
+
+# install autocompletion
+terraform -install-autocomplete
