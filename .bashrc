@@ -1,2 +1,2 @@
-source .bash_aliases
-source .profile 
+source ~/.bash_aliases
+source ~/.profile 
